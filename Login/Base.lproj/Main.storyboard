@@ -33,14 +33,14 @@
                                 <rect key="frame" x="20" y="28" width="79" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCI-Ui-gIY">
                                 <rect key="frame" x="20" y="69" width="79" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tc5-s8-mRg">
@@ -56,6 +56,10 @@
                                     <action selector="securePasswordClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uv6-Vm-BNW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="700" image="Berner-Detail-Bottle" translatesAutoresizingMaskIntoConstraints="NO" id="VBT-bK-5E2">
+                                <rect key="frame" x="20" y="142" width="300" height="450"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -65,13 +69,16 @@
                             <constraint firstItem="Tc5-s8-mRg" firstAttribute="trailing" secondItem="KJQ-pW-8xf" secondAttribute="trailing" id="9DV-6D-9vU"/>
                             <constraint firstItem="KJQ-pW-8xf" firstAttribute="leading" secondItem="yCI-Ui-gIY" secondAttribute="trailing" constant="8" symbolic="YES" id="DVG-Pj-BHh"/>
                             <constraint firstItem="8cN-pT-x7Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Jmg-qA-uaf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="VBT-bK-5E2" secondAttribute="leading" id="Kx7-gM-Nmh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cIc-eK-Ck4" secondAttribute="leading" id="L5d-up-xi2"/>
                             <constraint firstItem="Tc5-s8-mRg" firstAttribute="leading" secondItem="4oG-u7-8fR" secondAttribute="trailing" constant="30" id="Ngz-6K-POu"/>
                             <constraint firstItem="cIc-eK-Ck4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ODa-uc-2ko"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VBT-bK-5E2" secondAttribute="bottom" constant="8" symbolic="YES" id="PZw-OL-3ag"/>
                             <constraint firstItem="Tc5-s8-mRg" firstAttribute="top" secondItem="KJQ-pW-8xf" secondAttribute="bottom" constant="8" symbolic="YES" id="Prn-BK-AWm"/>
                             <constraint firstItem="yCI-Ui-gIY" firstAttribute="width" secondItem="cIc-eK-Ck4" secondAttribute="width" id="TxI-mi-5sx"/>
                             <constraint firstItem="KJQ-pW-8xf" firstAttribute="top" secondItem="8cN-pT-x7Q" secondAttribute="bottom" constant="8" symbolic="YES" id="UTD-wW-kFM"/>
                             <constraint firstItem="cIc-eK-Ck4" firstAttribute="baseline" secondItem="8cN-pT-x7Q" secondAttribute="baseline" id="UWk-5p-Yfu"/>
+                            <constraint firstItem="VBT-bK-5E2" firstAttribute="top" secondItem="Tc5-s8-mRg" secondAttribute="bottom" constant="8" symbolic="YES" id="Zja-qF-CK1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KJQ-pW-8xf" secondAttribute="trailing" id="arq-va-Dln"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8cN-pT-x7Q" secondAttribute="trailing" id="mrG-G8-xUE"/>
                             <constraint firstItem="8cN-pT-x7Q" firstAttribute="leading" secondItem="cIc-eK-Ck4" secondAttribute="trailing" constant="8" symbolic="YES" id="nBt-kn-eJ4"/>
@@ -79,11 +86,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordField" destination="KJQ-pW-8xf" id="Py4-eL-uzS"/>
                         <outlet property="passwordLabel" destination="yCI-Ui-gIY" id="tpy-e8-C3P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="460" y="387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Berner-Detail-Bottle" width="300" height="550"/>
+    </resources>
 </document>

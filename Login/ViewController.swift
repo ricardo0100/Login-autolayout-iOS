@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var passwordField: UITextField!
 
     var securePassword: Bool = false {
         didSet {
@@ -23,11 +24,8 @@ class ViewController: UIViewController {
     }
     
     func updateUI() {
-        if securePassword {
-            passwordLabel.text = "Secure Password"
-        } else {
-            passwordLabel.text = "Password"
-        }
+        passwordLabel.text = securePassword ? "Secure Password" : "Password"
+        passwordField.secureTextEntry = securePassword
     }
 
 }
